@@ -16,10 +16,10 @@ class cronEmail extends Command
 
     /**
      * The console command description.
-     *
+     *  
      * @var string    
      */
-    protected $description = 'Send an minute email to all the users’';
+    protected $description = 'Send an hour email to all the users';
 
     /**
      * Create a new command instance.
@@ -47,13 +47,13 @@ class cronEmail extends Command
  
        {
  
-        Mail::raw("This is automatically generated minute Update", function($message) use ($a)
+        Mail::raw("This is automatically generated hour Update", function($message) use ($a)
  
         {
  
            $message->from('saquib.gt@gmail.com');
  
-           $message->to($a->email)->subject('Minute Update');
+           $message->to($a->email)->subject('Hour Update');
  
          });
  
@@ -61,7 +61,7 @@ class cronEmail extends Command
  
  
  
-          $this->info('Minute Update has been send successfully');
+          $this->info('Hour Update has been send successfully');
  
    }
 }

@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-     
+        
 Auth::routes();
 
 
@@ -26,7 +23,7 @@ Route::get('/users/{id}/destroy', 'UsersController@destroy')->name('users.destro
      
 });
 
-Route::get('login',array('as'=>'login',function(){
+Route::get('/',array('as'=>'login',function(){
       return view('auth.login');
 }));
 
